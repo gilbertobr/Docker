@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+ elixir-phoenix:
+  build:
+      context: '.'
+
+  container_name: elixir-phoenix
+  restart: always
+  ports:
+   - '80:80'
+   - '443:443'
+   - '3306:3306'
+   - '4000:4000'
+   - '5432:5432'
+   - '55555:22'
+
