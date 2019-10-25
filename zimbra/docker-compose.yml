@@ -5,7 +5,10 @@ services:
    build:
       context: '.'
    container_name: zimbra_production
-   hostname: mail.examplezimbra.com.br
+   hostname: mail.zimbrainterno.com.br
+   volumes:
+    - /etc/resolv.conf:/etc/resolv.conf
+
 #   restart: always
    ports:
     - '25:25'
@@ -21,4 +24,3 @@ services:
     - '5223:5223'
     - '7071:7071'
     - '9071:9071'
-
